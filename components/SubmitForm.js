@@ -1,14 +1,11 @@
-import React, {useContext, useState} from 'react';
+import React, {useState} from 'react';
 import { Text, View, Button, TextInput } from "react-native";
-import DataContext from "../context/data-context";
 
 const SubmitForm = ({navigation}) => {
     const [number, setNumber] = useState(-1);
 
-    const dataContext = useContext(DataContext);
-
     const clickHandler = () => {
-        // setIsRedi(true);
+
         navigation.navigate('Agree', {num: number});
     };
 

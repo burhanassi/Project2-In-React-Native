@@ -1,7 +1,6 @@
 import 'react-native-gesture-handler';
-import React, {useContext, useState} from "react";
+import React, {useState} from "react";
 import NumbersList from "./NumbersList";
-import {DataContext} from "../context/data-context";
 import { View, Button, Text } from "react-native";
 
 const NumberAgreeForm = ({route, navigation}) => {
@@ -12,7 +11,6 @@ const NumberAgreeForm = ({route, navigation}) => {
 
     const {num} = route.params;
 
-    const dataContext = useContext(DataContext);
     const plusButtonHandler = () => {
         checkHandler();
         if(randNum > min){
